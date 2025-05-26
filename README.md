@@ -1,40 +1,21 @@
 
-# InsightGWAS: Transformer-Based Model for GWAS Analysis
+# InsightGWAS: MDD-GERD Transformer-Based Model for GWAS Analysis
 
 ## Overview
 ![Image text](fb59cf7aed8f14eb0969786ca29a449.jpg)
-InsightGWAS is a Transformer-based deep learning framework designed to prioritize genetic variants associated with complex diseases using **genome-wide association studies (GWAS) summary statistics** and **multi-modal genomic annotations**. The repository provides two versions of the model:
+InsightGWAS is a Transformer-based deep learning framework designed to prioritize genetic variants associated with complex diseases using **genome-wide association studies (GWAS) summary statistics** and **multi-modal genomic annotations**. The repository provides MDD-GERD Transformer Model:
 
-1. **MDD-MA Transformer Model**: Pre-trained on Major Depressive Disorder (MDD) GWAS data and fine-tuned on Migraine (MA) data.
-2. **MDD-GERD Transformer Model**: Pre-trained on Major Depressive Disorder (MDD) GWAS data and fine-tuned on Gastroesophageal Reflux Disease (GERD) data.
-### Running the MDD-MA Transformer Model Scripts
-Execute the scripts in the following order:
+**MDD-GERD Transformer Model**: Pre-trained on Major Depressive Disorder (MDD) GWAS data and fine-tuned on Gastroesophageal Reflux Disease (GERD) data.
 
-1. **Train the initial model on MDD data**:
-   ```bash
-   cd GERD-Transfomer-based-mode
-   python 1_train_model.py
-   ```
-
-2. **Perform transfer learning using MA data**:
-   ```bash
-   python 2_transform_learning_model.py
-   ```
-
-3. **Run inference**:
-   ```bash
-   python 3_inference.py
-   ```
 ### Running the MDD-GERD Transformer Model Scripts
 Execute the scripts in the following order:
 
 1. **Train the initial model on MDD data**:
    ```bash
-   cd MA-MDD-Transformer-based-model
    python 1_train_model.py
    ```
 
-2. **Perform transfer learning using MA data**:
+2. **Perform transfer learning using GERD data**:
    ```bash
    python 2_transform_learning_model.py
    ```
@@ -98,7 +79,3 @@ Ensure you have the following Python libraries installed:
 ## Example Data
 The dataset used in these scripts is **randomly sampled (10%) from the full dataset** for demonstration purposes. **This is only an example and does not reflect the actual model performance.** The full dataset is not included due to privacy concerns.
 
-## References
-If you use this repository in your research, please cite:
-- **GitHub Repository**: [https://github.com/ziangmeng/InsightGWAS](https://github.com/ziangmeng/InsightGWAS)
-- **Publication**: _Transformer-Based GWAS Variant Prioritization Using Multi-Modal Genomic Features_ 
